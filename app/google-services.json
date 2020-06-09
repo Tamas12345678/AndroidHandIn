@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "359793175849",
+    "firebase_url": "https://navbarzzleep.firebaseio.com",
+    "project_id": "navbarzzleep",
+    "storage_bucket": "navbarzzleep.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359793175849:android:44fc39d739bdeb0721db38",
+        "android_client_info": {
+          "package_name": "com.example.navbarzzleep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359793175849-6u8uo7hs23ngdiodqbgcfuj7k7ht39fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.navbarzzleep",
+            "certificate_hash": "16541c992ccdf1028b608052329e2ceebecbc5b1"
+          }
+        },
+        {
+          "client_id": "359793175849-spprak5jop2g764nq95fgvkrcqqi0n96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB27EOjGZzG7_OLE6HQcB8-QnYxFUB1nz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359793175849-spprak5jop2g764nq95fgvkrcqqi0n96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
