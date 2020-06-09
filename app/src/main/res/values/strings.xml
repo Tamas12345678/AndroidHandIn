@@ -3,4 +3,7 @@
     <string name="Mine">Mine</string>
     <string name="Shop">Shop</string>
     <string name="List">Garage</string>
+    <string name="gold">Gold</string>
+    <string name="chop">Chop!</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.navbarzzleep.ui.main;
+package com.example.navbarzzleep.ui.FireBase;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.example.navbarzzleep.ui.main;
+package com.example.navbarzzleep.ui.FireBase;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

@@ -1,4 +1,4 @@
-package com.example.navbarzzleep.ui.main;
+package com.example.navbarzzleep.ui.FireBase;
 
 import android.content.Context;
 
@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.navbarzzleep.ListFragment;
-import com.example.navbarzzleep.MineFragment;
+import com.example.navbarzzleep.List.ListFragment;
+import com.example.navbarzzleep.Mine.MineFragment;
 import com.example.navbarzzleep.R;
-import com.example.navbarzzleep.ShopFragment;
+import com.example.navbarzzleep.Shop.ShopFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
