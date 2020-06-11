@@ -8,10 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.navbarzzleep.List.ListFragment;
 import com.example.navbarzzleep.Mine.MineFragment;
 import com.example.navbarzzleep.R;
-import com.example.navbarzzleep.Shop.ShopFragment;
+import com.example.navbarzzleep.Shop.ListFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -38,10 +37,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new MineFragment();
                 break;
             case 1:
-                fragment = new ShopFragment();
+                fragment = new ListFragment();
                 break;
             case 2:
-                fragment = new ListFragment();
+                fragment = new com.example.navbarzzleep.List.ListFragment();
                 break;
 
         }

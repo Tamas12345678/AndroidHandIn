@@ -13,11 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="36dp"
         android:text="@string/chop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -35,29 +34,26 @@
         android:layout_width="216dp"
         android:layout_height="319dp"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="117dp"
         android:layout_marginEnd="98dp"
-        android:layout_marginBottom="51dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/before_chop"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/before_chop" />
 
     <ImageView
         android:id="@+id/chop"
         android:layout_width="216dp"
         android:layout_height="319dp"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="117dp"
         android:layout_marginEnd="98dp"
-        android:layout_marginBottom="51dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:contentDescription="@string/todo"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/chop"
-        android:contentDescription="@string/todo"
-        android:visibility="invisible"/>
+        app:srcCompat="@drawable/chop" />
 </androidx.constraintlayout.widget.ConstraintLayout>

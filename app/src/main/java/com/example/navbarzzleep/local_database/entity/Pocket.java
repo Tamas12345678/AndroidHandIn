@@ -7,14 +7,15 @@ import androidx.room.PrimaryKey;
 public class Pocket {
 
     @PrimaryKey(autoGenerate = true)
-    private int primaryKey;
-    private int gold;
+    String text;
 
-    public Pocket(int gold)
+    public Pocket(String text)
     {
-        this.gold = gold;
+        this.text = text;
+
     }
 
-    public int getGold() {return gold;}
+    public String getText() {return text;}
+
 
 }

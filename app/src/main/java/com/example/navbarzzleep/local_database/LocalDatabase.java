@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.navbarzzleep.local_database.entity.Pocket;
 
-@Database(entities = {Pocket.class}, version = 1, exportSchema = false)
+@Database(entities = {Pocket.class}, version = 4, exportSchema = false)
 public abstract class LocalDatabase extends RoomDatabase {
 
     private static LocalDatabase instance;
