@@ -6,6 +6,6 @@ import retrofit2.http.Path;
 
 public interface PokemonAPI {
 
-    @GET("api/v2/pokemon/{name}")
+    @GET("pokemon/{name}")
     Call<PokemonPlaceHolder> getPokemon(@Path("name") String name);
 }

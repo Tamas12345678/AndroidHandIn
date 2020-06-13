@@ -1,6 +1,5 @@
 package com.example.navbarzzleep.profil;
 
-import android.app.Application;
 import android.util.Log;
 
 import androidx.lifecycle.LiveData;
@@ -19,16 +18,17 @@ public class ProfileRepository {
 
     private static ProfileRepository repository;
     private MutableLiveData<Pokemon> pokemon;
+    private MutableLiveData<Integer> money;
 
-    private ProfileRepository(Application application)
+    private ProfileRepository()
     {
-        pokemon = new MutableLiveData<Pokemon>();
-
+        pokemon = new MutableLiveData<>();
+        money = new MutableLiveData<>();
     }
 
-    public static synchronized ProfileRepository getInstance(Application application) {
+    public static synchronized ProfileRepository getInstance() {
         if (repository== null) {
-            repository= new ProfileRepository(application);
+            repository= new ProfileRepository();
         }
         return repository;
     }
@@ -39,6 +39,7 @@ public class ProfileRepository {
 
     public void updateProfilePicture(String pokemonName)
     {
+        Log.i("FLOW", "REPOSITORY");
         PokemonAPI pokemonAPI = ServiceGenerator.getPokemonAPI();
         Call<PokemonPlaceHolder> call = pokemonAPI.getPokemon(pokemonName);
         call.enqueue(new Callback<PokemonPlaceHolder>() {
@@ -47,6 +48,8 @@ public class ProfileRepository {
                 if(response.code() == 200)
                 {
                     pokemon.setValue(response.body().getPokemon());
+                }else{
+                    Log.i("ERROR", "We have received the following error code: " + response.code());
                 }
             }
 
@@ -56,7 +59,11 @@ public class ProfileRepository {
             }
         });
     }
+    public void mining(int received) {
+        money.setValue(received);
+    }
 
-
-
+    public LiveData<Integer> getMoney() {
+        return money;
+    }
 }

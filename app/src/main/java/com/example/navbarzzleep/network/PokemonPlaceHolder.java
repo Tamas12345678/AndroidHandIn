@@ -10,7 +10,7 @@ public class PokemonPlaceHolder {
         return new Pokemon(id,name,sprites.front_default);
     }
 
-    public class Sprites{
+    private class Sprites{
         private String front_default;
     }
 
