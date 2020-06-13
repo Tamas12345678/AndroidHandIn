@@ -1,5 +1,6 @@
 package com.example.navbarzzleep.profil;
 
+import android.app.Application;
 import android.util.Log;
 
 import androidx.lifecycle.LiveData;
@@ -16,16 +17,20 @@ import retrofit2.Response;
 
 public class ProfileRepository {
 
-    private static ProfileRepository instance;
+    private static ProfileRepository repository;
     private MutableLiveData<Pokemon> pokemon;
 
-    private static synchronized ProfileRepository getInstance()
+    private ProfileRepository(Application application)
     {
-        if(instance == null)
-        {
-            instance = new ProfileRepository();
+        pokemon = new MutableLiveData<Pokemon>();
+
+    }
+
+    public static synchronized ProfileRepository getInstance(Application application) {
+        if (repository== null) {
+            repository= new ProfileRepository(application);
         }
-        return instance;
+        return repository;
     }
 
     public LiveData<Pokemon> getPokemon() {
