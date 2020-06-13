@@ -11,9 +11,38 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="47dp"
+        android:layout_marginTop="668dp"
+        android:layout_marginEnd="348dp"
         android:text="@string/gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_changePic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Pokemon name or number"
+        app:layout_constraintEnd_toStartOf="@+id/button_setNew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_setNew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="updatePokemon"
+        android:text="Request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_pokemon"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_changePic"
+        app:layout_constraintVertical_bias="0.2
+"
+        android:src="@color/colorAccent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

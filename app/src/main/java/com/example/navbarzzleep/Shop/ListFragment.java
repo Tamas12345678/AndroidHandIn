@@ -22,11 +22,11 @@ import com.example.navbarzzleep.local_database.entity.Pocket;
 import java.util.List;
 
 public class ListFragment extends Fragment {
-    View v;
-    Button button;
-    Button delete;
-    CheckBox checkBox;
-    EditText text;
+    private View v;
+    private Button button;
+    private Button delete;
+    private CheckBox checkBox;
+    private EditText text;
 
     //ViewModel
     private ListViewModel listViewModel;

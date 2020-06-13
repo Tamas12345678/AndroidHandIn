@@ -18,6 +18,7 @@ public abstract class LocalDatabase extends RoomDatabase {
     private static LocalDatabase instance;
     public abstract PocketDAO pocketDAO();
 
+
     public static synchronized LocalDatabase getInstance(Context context)
     {
         if(instance == null)

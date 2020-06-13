@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.navbarzzleep.Mine.MineFragment;
 import com.example.navbarzzleep.R;
 import com.example.navbarzzleep.Shop.ListFragment;
+import com.example.navbarzzleep.profil.ProfileFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -40,7 +41,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new ListFragment();
                 break;
             case 2:
-                fragment = new com.example.navbarzzleep.List.ListFragment();
+                fragment = new ProfileFragment();
                 break;
 
         }

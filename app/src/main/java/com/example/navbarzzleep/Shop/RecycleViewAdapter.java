@@ -63,6 +63,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     public  void setList(List<Pocket> list)
     {
         this.mListItems = list;
+        notifyDataSetChanged();
     }
 
 }
