@@ -61,6 +61,7 @@ public class MineFragment extends Fragment {
                 //State of visibility
                 chops.animate().alpha(1).setDuration(0);
                 before_chop.animate().alpha(0).setDuration(0);
+                mine.setEnabled(false);
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -69,7 +70,7 @@ public class MineFragment extends Fragment {
                         before_chop.animate().alpha(1).setDuration(500);
                         mine.setEnabled(true);
                     }
-                }, 500);
+                }, 1000);
 
                 int current = (preferences.getInt("money", 0)) + 1;
                 editor.putInt("money", current);
