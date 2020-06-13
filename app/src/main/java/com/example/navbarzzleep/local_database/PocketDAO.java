@@ -1,5 +1,6 @@
 package com.example.navbarzzleep.local_database;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -16,12 +17,14 @@ public interface PocketDAO {
 
 
     @Query("SELECT * FROM Pocket_table")
-    List<Pocket> getAllText();
+    LiveData<List<Pocket>> getAllText();
 
     @Query("DELETE FROM Pocket_table")
     void deleteAllText();
 
-    @Query("DELETE FROM Pocket_table WHERE text = :text")
+  /*  @Query("DELETE FROM Pocket_table WHERE text = :text")
     void deleteSpecificEl(String text);
 
+
+   */
 }

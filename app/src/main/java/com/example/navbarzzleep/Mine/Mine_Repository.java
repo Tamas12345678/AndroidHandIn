@@ -44,7 +44,7 @@ public static class InsertContactAsync extends AsyncTask<Pocket, Void, Void> {
 
     @Override
     protected Void doInBackground(Pocket... pockets) {
-            pocketDAO.addGold(pockets[0]);
+            pocketDAO.addText(pockets[0]);
 
         return null;
     }
