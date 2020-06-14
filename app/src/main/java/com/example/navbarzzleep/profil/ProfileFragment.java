@@ -2,6 +2,7 @@ package com.example.navbarzzleep.profil;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +25,8 @@ import com.bumptech.glide.Glide;
 import com.example.navbarzzleep.Mine.MineFragment;
 import com.example.navbarzzleep.R;
 import com.example.navbarzzleep.network.Pokemon;
+import com.example.navbarzzleep.ui.FireBase.Firebase;
+import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileFragment extends Fragment {
@@ -102,7 +106,13 @@ public class ProfileFragment extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
+                AuthUI.getInstance().signOut(getActivity()).addOnCompleteListener(task -> {
+                    if(task.isSuccessful()){
+                        startActivity(new Intent(getActivity(), Firebase.class));
+                    }else{
+                        Toast.makeText(getActivity(), "ERROR", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
             }
         });
