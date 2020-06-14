@@ -1,4 +1,4 @@
-package com.example.navbarzzleep.profil;
+package com.example.navbarzzleep.pokemonProfil;
 
 import android.app.Application;
 import android.util.Log;

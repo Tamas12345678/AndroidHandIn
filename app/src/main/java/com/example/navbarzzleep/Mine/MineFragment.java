@@ -37,6 +37,10 @@ public class MineFragment extends Fragment {
         View view = inflater.inflate(R.layout.main_fragment_layout, container, false);
         viewModel = new ViewModelProvider(this).get(MineViewModel.class);
 
+        chops = view.findViewById(R.id.chop);
+        chops.animate().alpha(0).setDuration(0);
+        before_chop = view.findViewById(R.id.before_chop_imageView);
+
         moneyTextView = view.findViewById(R.id.textView2);
 
         preferences = getActivity().getSharedPreferences("saved", Context.MODE_PRIVATE);
@@ -50,8 +54,7 @@ public class MineFragment extends Fragment {
             }
         });
 
-        chops = view.findViewById(R.id.chop);
-        before_chop = view.findViewById(R.id.before_chop_imageView);
+
         chops.animate().alpha(0).setDuration(0);
 
         mine = view.findViewById(R.id.button2);
@@ -61,7 +64,7 @@ public class MineFragment extends Fragment {
                 //State of visibility
                 chops.animate().alpha(1).setDuration(0);
                 before_chop.animate().alpha(0).setDuration(0);
-                mine.setEnabled(true);
+                mine.setEnabled(false);
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override

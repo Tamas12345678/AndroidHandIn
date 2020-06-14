@@ -22,27 +22,25 @@ import org.junit.runner.RunWith;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static androidx.test.espresso.action.ViewActions.pressImeActionButton;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
-
-
-//Fail was expected in this case
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class FirebaseCreateAccountTest {
+public class ChopTest {
 
     @Rule
     public ActivityTestRule<Firebase> mActivityTestRule = new ActivityTestRule<>(Firebase.class);
 
     @Test
-    public void firebaseCreateAccountTest() {
+    public void chopTest() {
         ViewInteraction supportVectorDrawablesButton = onView(
                 allOf(withId(R.id.email_button), withText("Sign in with email"),
                         childAtPosition(
@@ -60,7 +58,7 @@ public class FirebaseCreateAccountTest {
                                         withId(R.id.email_layout),
                                         0),
                                 0)));
-        textInputEditText.perform(scrollTo(), replaceText("to@v.dk"), closeSoftKeyboard());
+        textInputEditText.perform(scrollTo(), replaceText("t@t.hu"), closeSoftKeyboard());
 
         ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.button_next), withText("Next"),
@@ -73,40 +71,30 @@ public class FirebaseCreateAccountTest {
         appCompatButton.perform(scrollTo(), click());
 
         ViewInteraction textInputEditText2 = onView(
-                allOf(withId(R.id.name),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.name_layout),
-                                        0),
-                                0)));
-        textInputEditText2.perform(scrollTo(), replaceText("k"), closeSoftKeyboard());
-
-        ViewInteraction textInputEditText3 = onView(
-                allOf(withId(R.id.name), withText("k"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.name_layout),
-                                        0),
-                                0)));
-        textInputEditText3.perform(pressImeActionButton());
-
-        ViewInteraction textInputEditText4 = onView(
                 allOf(withId(R.id.password),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.password_layout),
                                         0),
                                 0)));
-        textInputEditText4.perform(scrollTo(), replaceText("1½2345678"), closeSoftKeyboard());
+        textInputEditText2.perform(scrollTo(), replaceText("123456"), closeSoftKeyboard());
 
-        ViewInteraction textInputEditText5 = onView(
-                allOf(withId(R.id.password), withText("1½2345678"),
+        ViewInteraction appCompatButton2 = onView(
+                allOf(withId(R.id.button_done), withText("Sign in"),
                         childAtPosition(
                                 childAtPosition(
-                                        withId(R.id.password_layout),
+                                        withClassName(is("android.widget.ScrollView")),
                                         0),
-                                0)));
-        textInputEditText5.perform(pressImeActionButton());
+                                4)));
+        appCompatButton2.perform(scrollTo(), click());
+
+        ViewInteraction appCompatButton3 = onView(
+                allOf(withId(R.id.button2), withText("Chop!"),
+                        childAtPosition(
+                                withParent(withId(R.id.view_pager)),
+                                0),
+                        isDisplayed()));
+        appCompatButton3.perform(click());
     }
 
     private static Matcher<View> childAtPosition(
