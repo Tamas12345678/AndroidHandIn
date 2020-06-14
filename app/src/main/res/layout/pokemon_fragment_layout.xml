@@ -44,4 +44,10 @@
         tools:srcCompat="@drawable/bush"
         tools:visibility="visible" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:text="Logout"
+        android:id="@+id/logout"/>
+
 </LinearLayout>

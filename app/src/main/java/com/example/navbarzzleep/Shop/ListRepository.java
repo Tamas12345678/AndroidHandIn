@@ -34,7 +34,8 @@ public class ListRepository {
 
   public LiveData<List<Pocket>> getAllTexts()
   {
-      return list;
+
+      return pocketDAO.getAllText();
   }
 
 

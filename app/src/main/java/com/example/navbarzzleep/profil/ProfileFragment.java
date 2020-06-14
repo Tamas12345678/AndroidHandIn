@@ -23,6 +23,7 @@ import com.bumptech.glide.Glide;
 import com.example.navbarzzleep.Mine.MineFragment;
 import com.example.navbarzzleep.R;
 import com.example.navbarzzleep.network.Pokemon;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileFragment extends Fragment {
 
@@ -35,6 +36,9 @@ public class ProfileFragment extends Fragment {
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
     private TextView profileGold;
+    private Button logout;
+    private FirebaseAuth mAuth;
+
 
     @SuppressLint("SetTextI18n")
     @Nullable
@@ -46,6 +50,8 @@ public class ProfileFragment extends Fragment {
         imageView = v.findViewById(R.id.imageView_pokemon);
         button = v.findViewById(R.id.button_setNew);
         profileGold = v.findViewById(R.id.profileGold);
+        logout = v.findViewById(R.id.logout);
+        mAuth = FirebaseAuth.getInstance();
 
         preferences = getActivity().getSharedPreferences("saved", Context.MODE_PRIVATE);
         editor = preferences.edit();
@@ -90,6 +96,14 @@ public class ProfileFragment extends Fragment {
             public void onChanged(Pokemon pokemon) {
                 Log.i("FLOW", "OH YEAH");
                 Glide.with(ProfileFragment.this).load(pokemon.getImageUrl()).into(imageView);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+
             }
         });
 
