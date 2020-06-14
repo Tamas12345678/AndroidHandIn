@@ -39,6 +39,9 @@
     <ImageView
         android:id="@+id/imageView_pokemon"
         android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/bush"
+        tools:srcCompat="@drawable/bush"
+        tools:visibility="visible" />
 
 </LinearLayout>

@@ -61,7 +61,7 @@ public class MineFragment extends Fragment {
                 //State of visibility
                 chops.animate().alpha(1).setDuration(0);
                 before_chop.animate().alpha(0).setDuration(0);
-                mine.setEnabled(false);
+                mine.setEnabled(true);
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override

@@ -43,7 +43,7 @@ public class ListFragment extends Fragment {
 
         listViewModel = new ViewModelProvider(this).get(ListViewModel.class);
 
-        v = inflater.inflate(R.layout.shopfragment_layout, container, false);
+        v = inflater.inflate(R.layout.listfragment_layout, container, false);
 
 
         //button = (Button) v.findViewById(R.id.button);

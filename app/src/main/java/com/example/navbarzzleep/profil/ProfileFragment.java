@@ -40,7 +40,7 @@ public class ProfileFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.list_fragment_layout, container, false);
+        View v = inflater.inflate(R.layout.pokemon_fragment_layout, container, false);
         profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         editText = v.findViewById(R.id.editText_changePic);
         imageView = v.findViewById(R.id.imageView_pokemon);
