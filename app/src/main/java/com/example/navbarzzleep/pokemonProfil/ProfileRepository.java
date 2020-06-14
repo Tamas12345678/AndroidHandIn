@@ -20,6 +20,10 @@ public class ProfileRepository {
     private MutableLiveData<Pokemon> pokemon;
     private MutableLiveData<Integer> money;
 
+
+
+    private int testingGold;
+
     private ProfileRepository()
     {
         pokemon = new MutableLiveData<>();
@@ -65,5 +69,13 @@ public class ProfileRepository {
 
     public LiveData<Integer> getMoney() {
         return money;
+    }
+
+    public int getTestingGold() {
+        return testingGold;
+    }
+
+    public void setTestingGold(int testingGold) {
+        this.testingGold = testingGold;
     }
 }

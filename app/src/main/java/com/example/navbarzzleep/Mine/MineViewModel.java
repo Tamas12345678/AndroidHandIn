@@ -21,4 +21,14 @@ public class MineViewModel extends ViewModel {
     {
         return profileRepository.getMoney();
     }
+
+    public void setTestingGold(int gold)
+    {
+        profileRepository.setTestingGold(gold);
+    }
+
+    public int getTestingGold()
+    {
+        return profileRepository.getTestingGold();
+    }
 }

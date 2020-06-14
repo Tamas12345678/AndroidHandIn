@@ -79,6 +79,7 @@ public class MineFragment extends Fragment {
                 editor.putInt("money", current);
                 editor.apply();
                 viewModel.mining(current);
+                viewModel.setTestingGold(current);
             }
         });
 

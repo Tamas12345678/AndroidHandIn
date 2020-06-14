@@ -89,6 +89,8 @@ public class ProfileFragment extends Fragment {
                     editor.apply();
                     profileViewModel.mining(current);
                     editText.setText("");
+
+                    profileViewModel.setTestingGold(current);
                 }
 
             }

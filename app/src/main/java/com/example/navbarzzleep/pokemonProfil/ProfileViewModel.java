@@ -39,4 +39,14 @@ public class ProfileViewModel extends AndroidViewModel {
         repository.mining(money);
     }
 
+    public void setTestingGold(int gold)
+    {
+        repository.setTestingGold(gold);
+    }
+
+    public int getTestingGold()
+    {
+        return repository.getTestingGold();
+    }
+
 }

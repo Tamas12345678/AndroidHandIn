@@ -28,6 +28,8 @@ import static org.hamcrest.Matchers.equalTo;
 @RunWith(AndroidJUnit4.class)
 public class LocalDatabaseTest {
 
+
+
     private PocketDAO pocketDAO;
     private LocalDatabase localDatabase;
 
@@ -60,6 +62,9 @@ public class LocalDatabaseTest {
          pocketDAO.addText(pocket);
          pocketDAO.addText(pocket);
          pocketDAO.addText(pocket);
+
+
+         //since it is LiveData it gives me a null pointer exeption when I want to get the size
         assertThat(pocketDAO.getAllText().getValue().size(),equalTo(1));
 
     }
